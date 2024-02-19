@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.0.5",
     "aos": "^2.3.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
@@ -16,6 +17,7 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-hot-toast": "^2.4.1",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7"
   },

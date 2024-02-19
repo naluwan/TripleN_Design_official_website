@@ -1,6 +1,8 @@
+import Navbar from '@/components/Navbar';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { ToastProvider } from '@/components/providers/toaster-provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -42,7 +44,15 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='zh-tw' className='hide-scrollbar'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className='sticky top-0 z-50 bg-white shadow-md'>
+          <Navbar />
+        </div>
+        <main className='mx-auto h-auto max-w-[1440px]'>
+          <ToastProvider />
+          {children}
+        </main>
+      </body>
     </html>
   );
 };
