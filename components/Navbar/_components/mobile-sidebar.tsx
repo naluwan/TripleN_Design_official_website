@@ -16,7 +16,7 @@ const MobileSidebar = () => {
   return (
     <Sheet>
       <SheetTrigger className='pr-4 transition hover:opacity-75 lg:hidden'>
-        <Menu />
+        <Menu size={35} />
       </SheetTrigger>
       <SheetContent side='right' className='bg-white p-0'>
         <div className='flex h-full flex-col overflow-y-auto border-r bg-white shadow-sm'>
@@ -30,7 +30,7 @@ const MobileSidebar = () => {
             />
           </div>
           <div className='flex h-full w-full flex-col'>
-            <div className={cn('flex w-full flex-col items-start gap-y-2')}>
+            <div className={cn('flex w-full flex-col items-start gap-y-4')}>
               {routes.map((route) => {
                 const isActive =
                   (pathName === '/' && route.href === '/') ||
